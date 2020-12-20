@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "510200428123",
+    "firebase_url": "https://multirolelogin.firebaseio.com",
+    "project_id": "multirolelogin",
+    "storage_bucket": "multirolelogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510200428123:android:0be918b10a6a74f4cff17e",
+        "android_client_info": {
+          "package_name": "com.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510200428123-j77iim7iv26v14qq8mh5mbjdetfb89a0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9YJ0Rmqwr5ciqOIraOJuQcbxB55KSbLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510200428123-j77iim7iv26v14qq8mh5mbjdetfb89a0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,7 +17,7 @@ import {NavigationContainer, CommonActions} from '@react-navigation/native';
 
 // import {Value} from 'react-native-reanimated';
 // impor index from './Index';
-const URL_LOGIN = 'http://192.168.1.234:4000/api/login/loginuser/';
+const URL_LOGIN = 'http://172.20.10.6:4000/api/login/loginuser/';
 
 export default class Login extends Component {
   state = {
@@ -36,7 +36,7 @@ export default class Login extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-    // console.warn(data)
+    console.warn(data);
 
     axios
       .post(URL_LOGIN, data)
@@ -50,6 +50,7 @@ export default class Login extends Component {
           DataUser.role = res.data.role;
 
           AsyncStorage.setItem('name', res.data.name);
+          AsyncStorage.setItem('email', res.data.email);
           AsyncStorage.setItem('token', res.data.token);
           AsyncStorage.setItem('role', JSON.stringify(res.data.role));
           console.log(res.data.name);
@@ -87,7 +88,7 @@ export default class Login extends Component {
           style={styles.inputBox}
           underlineColorAndroid="rgba(0,0,0,0)"
           placeholder="Email"
-          placeholderTextColor="#ffffff"
+          placeholderTextColor="#212121"
           selectionColor="#fff"
           keyboardType="email-address"
           onChangeText={e => this.setState({email: e})}
@@ -99,7 +100,7 @@ export default class Login extends Component {
           underlineColorAndroid="rgba(0,0,0,0)"
           placeholder="Password"
           secureTextEntry={true}
-          placeholderTextColor="#ffffff"
+          placeholderTextColor="#212121"
           onChangeText={e => this.setState({password: e})}
           value={this.state.password}
         />
@@ -109,7 +110,7 @@ export default class Login extends Component {
           onPress={() => this.postLogin()}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <Text style={{color: 'white', marginBottom: 60}}>
+        <Text style={{color: '#212121', marginBottom: 60}}>
           {' '}
           Credit Viwi App 2020{' '}
         </Text>
@@ -126,13 +127,13 @@ const styles = StyleSheet.create({
     // justifyContent:'center',
 
     alignItems: 'center',
-    backgroundColor: '#0053AD',
+    backgroundColor: '#B2DFDB',
   },
 
   inputBox: {
     width: 300,
 
-    backgroundColor: 'rgba(255, 255,255,0.2)',
+    backgroundColor: 'rgba(255, 255,255,0.3)',
 
     borderRadius: 25,
 
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
 
     fontSize: 16,
 
-    color: '#ffffff',
+    color: '#212121',
 
     marginVertical: 10,
   },
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
   button: {
     width: 300,
 
-    backgroundColor: '#1c313a',
+    backgroundColor: '#607D8B',
 
     borderRadius: 25,
 

@@ -28,8 +28,12 @@ const Stack = createStackNavigator();
 function Navigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashScreen">
-        <Stack.Screen name="DashboardUser" component={DashboardUser} />
+      <Stack.Navigator initialRouteName="DashboardUser">
+        <Stack.Screen
+          name="DashboardUser"
+          component={DashboardUser}
+          options={{headerShown: false}}
+        />
         <Stack.Screen name="DashboardAdmin" component={DashboardAdmin} />
         <Stack.Screen
           name="SplashScreen"
